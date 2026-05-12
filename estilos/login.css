@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+:root {
+    --cor: #B2A7D9;
+    --cor-do-gradiente: #80A2BF;
+    --cor-link: #088C8C;
+    --cor-principal: #077373;
+    --cor-branca: #DFF2E9;
+    --cor: #176FA6;
+    --cor: #4AC7F5;
+    --fonte: "Poppins", sans-serif;
+}
+
+body {
+    font-family: var(--fonte);
+}
+
+.cabecalho_navegacao {
+    background-color: var(--cor-principal);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    min-width: 300px;
+}
+
+.cabecalho_navegacao-logo {
+    margin-top: 10px;
+    width: 80px;
+    height: 64px;
+}
+
+.cabecalho_navegacao_links, .cabecalho_link_entrar {
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--cor-branca);
+    width: 138px;
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.botao {
+    text-align: center;
+    width: 300px;
+    height: 36px;
+    border: 1px solid rgb(165, 165, 165);
+    
+}
+
+.paragrafo {
+    margin: 30px;
+}
+
+/* ---------- FORMULÁRIO ---------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+  padding-left: 12px;
+  height: 35px;
+}
+
+input[type="email"], input[type="password"] {
+    width: 300px;
+    height: 36px;
+    border: 1px solid rgba(163, 163, 163, 0.705);
+}
+
+input[placeholder="email"], input[placeholder="password"] {
+    padding: 10px;
+}
+
+input[placeholder="password"] {
+    background-color: #2D6CC4;
+}
+
+.esqueci {
+    background-color: white;
+    color: #2D6CC4;
+}
