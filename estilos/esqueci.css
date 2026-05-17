@@ -1,0 +1,185 @@
+/* =========================================
+   Reset e Configurações Globais
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.page {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* =========================================
+   Bloco: Header
+   ========================================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d7a7b; /* Tom de verde/azulado do layout */
+    padding: 1rem 3rem;
+    height: 80px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+.header__nav-link {
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+}
+
+.header__nav-link:hover {
+    opacity: 0.8;
+}
+
+.header__login-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #159a9c; /* Fundo levemente mais claro que o header */
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.header__login-btn:hover {
+    background-color: #128a8b;
+}
+
+.header__login-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================================
+   Bloco: Password Recovery
+   ========================================= */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem; /* Espaço do header até o formulário */
+}
+
+.password-recovery__container {
+    width: 100%;
+    max-width: 500px; /* Largura máxima do form controlando o layout */
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.password-recovery__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #000000;
+    text-align: left;
+}
+
+.password-recovery__description {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.password-recovery__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.password-recovery__input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.password-recovery__input:focus {
+    border-color: #1a65d6; /* Cor de foco azul */
+}
+
+.password-recovery__submit-btn {
+    width: 100%;
+    background-color: #1a65d6; /* Azul do botão */
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.password-recovery__submit-btn:hover {
+    background-color: #1455b5;
+}
+
+.password-recovery__cancel-link {
+    color: #1a65d6;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.password-recovery__cancel-link:hover {
+    text-decoration: underline;
+}
+
+.password-recovery__divider {
+    border: none;
+    border-top: 1px solid #eaeaea;
+    margin: 2rem 0;
+}
+
+.password-recovery__footer-text {
+    font-size: 0.95rem;
+    color: #777777;
+}
+
+.password-recovery__signup-link {
+    color: #1a65d6;
+    font-weight: 500;
+}
+
+.password-recovery__signup-link:hover {
+    text-decoration: underline;
+}

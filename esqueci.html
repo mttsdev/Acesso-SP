@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha - AcessoSP</title>
+    <link rel="stylesheet" href="estilos/esqueci.css">
+</head>
+<body class="page">
+    
+    <header class="header">
+        <div class="header__logo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#" class="header__nav-link">AcessoSP</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Locais avaliados</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Profissionais</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Contato</a></li>
+            </ul>
+        </nav>
+
+        <button class="header__login-btn">
+            <svg class="header__login-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            Entrar
+        </button>
+    </header>
+
+    <main class="main-content">
+        <section class="password-recovery">
+            <div class="password-recovery__container">
+                
+                <h1 class="password-recovery__title">Insira o seu e-mail</h1>
+                <p class="password-recovery__description">Você receberá uma mensagem com o link para criar sua nova senha</p>
+
+                <form class="password-recovery__form" action="#" method="POST">
+                    <input 
+                        type="email" 
+                        class="password-recovery__input" 
+                        placeholder="Digite seu e-mail" 
+                        required
+                    >
+                    <button type="submit" class="password-recovery__submit-btn">Envie</button>
+                    <a href="#" class="password-recovery__cancel-link">Cancelar</a>
+                </form>
+
+                <hr class="password-recovery__divider">
+
+                <p class="password-recovery__footer-text">
+                    Ainda não tem conta? <a href="#" class="password-recovery__signup-link">Faça seu cadastro!</a>
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

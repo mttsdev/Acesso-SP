@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhores Avaliados - AcessoSP</title>
+    <link rel="stylesheet" href="estilos/mapa.css">
+</head>
+<body class="page">
+
+    <header class="header">
+        <div class="header__logo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#" class="header__nav-link">AcessoSP</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Locais avaliados</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Profissionais</a></li>
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Contato</a></li>
+            </ul>
+        </nav>
+        <button class="header__login-btn">
+            <svg class="header__login-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            Entrar
+        </button>
+    </header>
+
+    <main class="main-content">
+        
+        <section class="hero">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14621.164981370839!2d-46.6222736!3d-23.62973865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1778990247089!5m2!1spt-BR!2sbr" class="hero__iframe"style="border:0; height="741px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <div class="hero__search-card">
+                <label class="hero__label" for="address-input">Insira o endereço</label>
+                <div class="hero__input-wrapper">
+                    <input type="text" id="address-input" class="hero__input" placeholder="Exemplo: Av. da Liberdade, 800">
+                    <button class="hero__search-btn" aria-label="Buscar">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <header class="categories__header">
+                <h1 class="categories__title">Melhores avaliados</h1>
+                <p class="categories__subtitle">Explore por segmento com os locais com as melhores avaliações de acessibilidade.</p>
+            </header>
+
+            <div class="categories__grid">
+                <article class="category-card">
+                    <div class="category-card__icon-container">
+                        <svg class="category-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </div>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Alimentação</h2>
+                        <span class="category-card__count">{Número de lugares}</span>
+                    </div>
+                    <svg class="category-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-card__icon-container">
+                        <svg class="category-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </div>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Educação</h2>
+                        <span class="category-card__count">{Número de lugares}</span>
+                    </div>
+                    <svg class="category-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-card__icon-container">
+                        <svg class="category-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </div>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Arte e Entretenimento</h2>
+                        <span class="category-card__count">{Número de lugares}</span>
+                    </div>
+                    <svg class="category-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-card__icon-container">
+                        <svg class="category-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </div>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Lojas e restaurantes</h2>
+                        <span class="category-card__count">{Número de lugares}</span>
+                    </div>
+                    <svg class="category-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-card__icon-container">
+                        <svg class="category-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </div>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Associações e ONGs</h2>
+                        <span class="category-card__count">{Número de lugares}</span>
+                    </div>
+                    <svg class="category-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-card__icon-container">
+                        <svg class="category-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </div>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Saúde</h2>
+                        <span class="category-card__count">{Número de lugares}</span>
+                    </div>
+                    <svg class="category-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-card__icon-container">
+                        <svg class="category-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </div>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Bancos e Financeiras</h2>
+                        <span class="category-card__count">{Número de lugares}</span>
+                    </div>
+                    <svg class="category-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-card__icon-container">
+                        <svg class="category-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </div>
+                    <div class="category-card__content">
+                        <h2 class="category-card__title">Transportes e serviços</h2>
+                        <span class="category-card__count">{Número de lugares}</span>
+                    </div>
+                    <svg class="category-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand-side">
+                <div class="footer__logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
+                </div>
+                <div class="footer__socials">
+                    <a href="#" class="footer__social-link">𝕏</a>
+                    <a href="#" class="footer__social-link">📸</a>
+                    <a href="#" class="footer__social-link">📺</a>
+                </div>
+            </div>
+
+            <div class="footer__links-side">
+                <h3 class="footer__links-title">Use cases</h3>
+                <ul class="footer__links-list">
+                    <li><a href="#" class="footer__link">UI design</a></li>
+                    <li><a href="#" class="footer__link">UX design</a></li>
+                    <li><a href="#" class="footer__link">Wireframing</a></li>
+                    <li><a href="#" class="footer__link">Diagramming</a></li>
+                    <li><a href="#" class="footer__link">Brainstorming</a></li>
+                    <li><a href="#" class="footer__link">Online whiteboard</a></li>
+                    <li><a href="#" class="footer__link">Team collaboration</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

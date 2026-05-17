@@ -1,0 +1,301 @@
+/* =========================================
+   Reset e Configurações Globais
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.page {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================
+   Bloco: Header (Idêntico ao anterior)
+   ========================================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d7a7b;
+    padding: 1rem 3rem;
+    height: 80px;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+.header__nav-item {
+    list-style-type: none;
+}
+.header__nav-link {
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.header__login-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #159a9c;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   Bloco: Hero (Seção do Mapa)
+   ========================================= */
+.hero {
+    height: 400px;
+    position: relative; /* Base de posicionamento para o iframe e o card de busca */
+    width: 100%;
+    overflow: hidden;   /* Garante que o iframe não quebre os cantos se houver algum ajuste */
+}
+
+/* Força o iframe a ocupar 100% do espaço de fundo da seção hero */
+.hero__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Valor menor para ficar ao fundo */
+}
+
+/* Card de busca flutuando na frente do mapa */
+.hero__search-card {
+    position: absolute;
+    top: 30px;  /* Afastamento do topo do mapa */
+    left: 50px; /* Afastamento da lateral esquerda do mapa */
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra para dar destaque e profundidade */
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    z-index: 10; /* Valor maior para garantir que fique por cima do iframe */
+}
+
+.hero__label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+.hero__input-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.hero__input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.hero__search-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+iframe {
+    width: 100%;
+}
+
+/* =========================================
+   Bloco: Categories (Grid central)
+   ========================================= */
+.categories {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.categories__header {
+    margin-bottom: 3rem;
+}
+
+.categories__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #111111;
+}
+
+.categories__subtitle {
+    font-size: 1.05rem;
+    color: #666666;
+}
+
+.categories__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria as duas colunas do layout */
+    gap: 1.5rem;
+}
+
+/* Sub-Bloco / Componente: Category Card */
+.category-card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-color: #dddddd;
+}
+
+.category-card__icon-container {
+    color: #444444;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.category-card__content {
+    flex: 1;
+    text-align: left;
+}
+
+.category-card__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 0.25rem;
+}
+
+.category-card__count {
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+.category-card__arrow {
+    color: #444444;
+}
+
+/* =========================================
+   Bloco: Footer
+   ========================================= */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+    padding: 4rem 3rem;
+    margin-top: auto;
+}
+
+.footer__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__brand-side {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer__social-link {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.footer__social-link:hover {
+    opacity: 1;
+}
+
+.footer__links-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.footer__links-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer__links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer__link {
+    font-size: 0.9rem;
+    color: #666666;
+    transition: color 0.2s;
+}
+
+.footer__link:hover {
+    color: #000000;
+}
+
+/* Responsividade Básica para telas menores */
+@media (max-width: 768px) {
+    .categories__grid {
+        grid-template-columns: 1fr;
+    }
+    .footer__container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
