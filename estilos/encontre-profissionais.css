@@ -1,0 +1,274 @@
+/* =========================================
+   Reset e Configurações Globais
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.page {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+li { list-style: none; }
+
+/* =========================================
+   Bloco: Header
+   ========================================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d7a7b;
+    padding: 1rem 3rem;
+    height: 80px;
+}
+
+.header__logo { display: flex; align-items: center; }
+.header__nav { flex: 1; display: flex; justify-content: center; }
+.header__nav-list { display: flex; gap: 2rem; }
+.header__nav-link { color: #ffffff; font-size: 0.95rem; }
+
+.header__login-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #159a9c;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   Bloco: Hero Professionals
+   ========================================= */
+.hero-professionals {
+    position: relative;
+    height: 450px;
+    /* Usando imagem da Ponte Estaiada via Unsplash para simular o fundo */
+    background-image: url('https://images.unsplash.com/photo-1542385262-cdf06b2abcb8?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Camada escura por cima da imagem para dar contraste ao texto branco */
+.hero-professionals__overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(17, 34, 51, 0.6); 
+    z-index: 1;
+}
+
+.hero-professionals__content {
+    position: relative;
+    z-index: 2; /* Garante que fica na frente do overlay */
+    color: #ffffff;
+    max-width: 800px;
+}
+
+.hero-professionals__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-professionals__subtitle {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+/* Caixa de Busca com fundo verde claro */
+.hero-professionals__search-box {
+    background-color: #e6f2f2; /* Verde bem clarinho do layout */
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-professionals__input-group {
+    flex: 1;
+}
+
+.hero-professionals__select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #555555;
+    background-color: #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+
+.hero-professionals__search-btn {
+    background-color: #0d7a7b;
+    color: #ffffff;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.hero-professionals__search-btn:hover {
+    background-color: #0a5f60;
+}
+
+/* =========================================
+   Bloco: Help Section (Gradiente)
+   ========================================= */
+.help-section {
+    /* Gradiente vertical do verde-escuro para o azul-acinzentado */
+    background: linear-gradient(180deg, #1d8283 0%, #7da2b4 100%);
+    padding: 4rem 2rem 5rem 2rem;
+}
+
+.help-section__container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.help-section__title {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.help-section__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Sub-bloco: Help Card */
+.help-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.help-card__image-placeholder {
+    height: 220px;
+    /* CSS Trick para criar o padrão xadrez de "fundo transparente" idêntico ao mockup */
+    background-color: #f0f0f0;
+    background-image: 
+      linear-gradient(45deg, #e0e0e0 25%, transparent 25%), 
+      linear-gradient(-45deg, #e0e0e0 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #e0e0e0 75%), 
+      linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.help-card__content {
+    padding: 1.25rem;
+    background-color: #ffffff;
+}
+
+.help-card__label {
+    color: #333333;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* =========================================
+   Bloco: Footer (Novo Layout)
+   ========================================= */
+.footer {
+    background-color: #ffffff;
+    padding: 4rem 3rem;
+}
+
+.footer__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    /* Divide em 4 colunas com tamanhos variados */
+    grid-template-columns: 80px 1fr 1fr 1.5fr; 
+    gap: 2rem;
+}
+
+.footer__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 1.25rem;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer__link {
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+.footer__link:hover {
+    color: #0d7a7b;
+}
+
+.footer__column--info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer__text {
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.4;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.footer__social-link {
+    color: #333;
+    opacity: 0.7;
+}
+
+.footer__social-link:hover {
+    opacity: 1;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .help-section__grid { grid-template-columns: 1fr; }
+    .hero-professionals__search-box { flex-direction: column; }
+    .footer__container { grid-template-columns: 1fr; }
+}

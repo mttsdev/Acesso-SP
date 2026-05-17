@@ -1,0 +1,214 @@
+/* ==========================================================================
+   1. VARIÁVEIS GLOBAIS (Design System do AcessoSP)
+   ========================================================================== */
+:root {
+    /* Cores Principais (Paleta de Verdes/Azuis do Layout) */
+    --color-primary: #0d7a7b;       /* Verde escuro principal da Navbar */
+    --color-primary-hover: #0a5f60; /* Verde mais escuro para hovers */
+    --color-secondary: #159a9c;     /* Verde claro dos botões secundários */
+    --color-secondary-hover: #128a8b;
+    --color-bg-menu-mobile: #0b6364;/* Fundo da gaveta do menu no celular */
+    --color-accent-blue: #1a65d6;   /* Azul usado em botões de ação externa (ex: Envie, Links) */
+    --color-accent-blue-hover: #1455b5;
+
+    /* Tons Neutros */
+    --color-white: #ffffff;
+    --color-gray-light: #f9f9f9;    /* Fundos de seções secundárias */
+    --color-border: #dddddd;        /* Bordas padrão de inputs e cards */
+    --color-text-main: #333333;     /* Texto principal do corpo */
+    --color-text-muted: #666666;    /* Subtítulos e contadores */
+
+    /* Tipografia e Estrutura */
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --max-width-content: 1100px;    /* Alinhamento padrão das seções do site */
+}
+
+/* ==========================================================================
+   2. RESET UNIVERSAL & BOAS PRÁTICAS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.page {
+    font-family: var(--font-main);
+    background-color: var(--color-white);
+    color: var(--color-text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o footer fique na base da tela se a página tiver pouco conteúdo */
+}
+
+/* Reset de elementos comuns para evitar repetição por página */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button, input, select {
+    font-family: inherit;
+}
+
+/* Classe utilitária para o conteúdo principal não sumir atrás do header */
+.main-content {
+    flex: 1; /* Força o main a empurrar o footer para baixo */
+}
+
+/* ==========================================================================
+   3. COMPONENTE COMPARTILHADO: NAVBAR (Mobile-First)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 0 1.5rem;
+    height: 80px;
+    position: relative;
+    z-index: 100; /* Mantém a navbar sempre acima de mapas ou overlays */
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Botão Hambúrguer (Mobile) */
+.navbar__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar__toggle-bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Menu de navegação oculto no Mobile por padrão */
+.navbar__menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-menu-mobile);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    
+    /* Estado inicial (Escondido com animação suave) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+/* Modificador BEM: Ativado via JavaScript ao clicar no hambúrguer */
+.navbar__menu--open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.navbar__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.navbar__link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.navbar__login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.navbar__login-btn:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+/* ==========================================================================
+   4. TRANSIÇÃO DE COMPORTAMENTO (Media Query para Desktop)
+   ========================================================================== */
+@media (min-width: 768px) {
+    /* Oculta o hambúrguer, já que temos espaço para o menu horizontal */
+    .navbar__toggle {
+        display: none;
+    }
+
+    /* Transforma a gaveta mobile em uma barra horizontal limpa */
+    .navbar__menu {
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        padding: 0;
+        width: auto;
+        flex: 1;
+        margin-left: 3rem;
+        
+        /* Força a exibição anulando as propriedades restritivas do mobile */
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .navbar__list {
+        flex-direction: row;
+        gap: 2rem;
+        margin: 0 auto; /* Centraliza perfeitamente os links no meio do header */
+    }
+
+    .navbar__link {
+        font-size: 0.95rem;
+    }
+
+    .navbar__login-btn {
+        width: auto; /* O botão deixa de ocupar 100% e abraça apenas o texto */
+        padding: 0.5rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
