@@ -13,22 +13,27 @@
     <title>Crie a sua conta - AcessoSP</title>
 </head>
 <body>
-    <header>
-        <div class="cabecalho_navegacao">
-            <a href="index.html" class="logo">
-                <img class="cabecalho_navegacao-logo" src="assets/logo-header.png" alt="Logo do AcessoSP">
-            </a>
-            
-            <nav>
-                <a class="cabecalho_navegacao_links" href="index.html">AcessoSP</a>
-                <a class="cabecalho_navegacao_links" href="locais-avaliados.html">Locais avaliados</a>
-                <a class="cabecalho_navegacao_links" href="profissionais.html">Profissionais</a>
-            </nav>
+    <header class="navbar">
+        <a href="index.html" class="navbar__logo">
+            <img class="cabecalho_navegacao-logo" src="../assets/logo-header.png" alt="Logo do AcessoSP">
+        </a>
 
-            <a class="cabecalho_link_entrar" href="login.html">
+        <button class="navbar__toggle" aria-label="Abrir menu" onclick="toggleMenu()">
+            <span class="navbar__toggle-bar"></span>
+            <span class="navbar__toggle-bar"></span>
+            <span class="navbar__toggle-bar"></span>
+        </button>
+
+        <nav class="navbar__menu" id="navbarMenu">
+            <ul class="navbar__list">
+                <li class="navbar__nav-item"><a href="index.html" class="navbar__link navbar__link--active">AcessoSP</a></li>
+                <li class="navbar__nav-item"><a href="locais-avaliados.html" class="navbar__link">Locais avaliados</a></li>
+                <li class="navbar__nav-item"><a href="profissionais.html" class="navbar__link">Profissionais</a></li>
+            </ul>
+            <a href="login.html" class="navbar__login-btn">
                 <i class="fa-regular fa-user"></i> Entrar
             </a>
-        </div>
+        </nav>
     </header>
 
     <main>
@@ -70,5 +75,46 @@
             </form>
         </div>
     </main>
+    <footer>
+        <hr class="linha-footer">
+        <div class="container footer-container">
+            <div class="footer-coluna">
+                <h3>AcessoSP</h3>
+                <ul>
+                    <li><a href="locais-avaliados.html">Locais avaliados</a></li>
+                    <li><a href="profissionais.html">Profissionais</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="">Sobre Nós</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-coluna">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="">Como nos ajudar?</a></li>
+                    <li><a href="">Trabalhe Conosco</a></li>
+                    <li><a href="">Leis</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-coluna info-empresa">
+                <h3>Logo-empresa</h3>
+                <p>AcessoSP, um lugar para todos<br>serem inclusos!</p>
+                <p>Av Liberdade, 871 - 04355-080</p>
+                
+                <div class="redes-sociais">
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navbarMenu');
+            menu.classList.toggle('navbar__menu--open');
+        }
+    </script>
 </body>
 </html>

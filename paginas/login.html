@@ -13,22 +13,27 @@
     <title>Login - AcessoSP</title>
 </head>
 <body>
-    <header>
-        <div class="cabecalho_navegacao">
-            <a href="index.html" class="logo">
-                <img class="cabecalho_navegacao-logo" src="assets/logo-header.png" alt="Logo do AcessoSP">
-            </a>
-            
-            <nav>
-                <a class="cabecalho_navegacao_links" href="index.html">AcessoSP</a>
-                <a class="cabecalho_navegacao_links" href="locais-avaliados.html">Locais avaliados</a>
-                <a class="cabecalho_navegacao_links" href="profissionais.html">Profissionais</a>
-            </nav>
+    <header class="navbar">
+        <a href="index.html" class="navbar__logo">
+            <img class="cabecalho_navegacao-logo" src="../assets/logo-header.png" alt="Logo do AcessoSP">
+        </a>
 
-            <a class="cabecalho_link_entrar" href="login.html">
+        <button class="navbar__toggle" aria-label="Abrir menu" onclick="toggleMenu()">
+            <span class="navbar__toggle-bar"></span>
+            <span class="navbar__toggle-bar"></span>
+            <span class="navbar__toggle-bar"></span>
+        </button>
+
+        <nav class="navbar__menu" id="navbarMenu">
+            <ul class="navbar__list">
+                <li class="navbar__nav-item"><a href="index.html" class="navbar__link navbar__link--active">AcessoSP</a></li>
+                <li class="navbar__nav-item"><a href="locais-avaliados.html" class="navbar__link">Locais avaliados</a></li>
+                <li class="navbar__nav-item"><a href="profissionais.html" class="navbar__link">Profissionais</a></li>
+            </ul>
+            <a href="login.html" class="navbar__login-btn">
                 <i class="fa-regular fa-user"></i> Entrar
             </a>
-        </div>
+        </nav>
     </header>
 
     <main>

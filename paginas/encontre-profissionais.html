@@ -9,28 +9,27 @@
 </head>
 <body class="page">
 
-    <header class="header">
-        <div class="header__logo">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-        </div>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#" class="header__nav-link">AcessoSP</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Locais avaliados</a></li>
-                <li class="header__nav-item"><a href="#" class="header__nav-link">Profissionais</a></li>
-            </ul>
-        </nav>
-        <button class="header__login-btn">
-            <svg class="header__login-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            Entrar
+    <header class="navbar">
+        <a href="index.html" class="navbar__logo">
+            <img class="cabecalho_navegacao-logo" src="../assets/logo-header.png" alt="Logo do AcessoSP">
+        </a>
+
+        <button class="navbar__toggle" aria-label="Abrir menu" onclick="toggleMenu()">
+            <span class="navbar__toggle-bar"></span>
+            <span class="navbar__toggle-bar"></span>
+            <span class="navbar__toggle-bar"></span>
         </button>
+
+        <nav class="navbar__menu" id="navbarMenu">
+            <ul class="navbar__list">
+                <li class="navbar__nav-item"><a href="index.html" class="navbar__link navbar__link--active">AcessoSP</a></li>
+                <li class="navbar__nav-item"><a href="locais-avaliados.html" class="navbar__link">Locais avaliados</a></li>
+                <li class="navbar__nav-item"><a href="profissionais.html" class="navbar__link">Profissionais</a></li>
+            </ul>
+            <a href="login.html" class="navbar__login-btn">
+                <i class="fa-regular fa-user"></i> Entrar
+            </a>
+        </nav>
     </header>
 
     <main class="main-content">
@@ -90,43 +89,47 @@
 
     </main>
 
-    <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__column footer__column--logo">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-            </div>
-
-            <div class="footer__column">
-                <h3 class="footer__title">AcessoSP</h3>
-                <ul class="footer__list">
-                    <li><a href="#" class="footer__link">Locais avaliados</a></li>
-                    <li><a href="#" class="footer__link">Profissionais</a></li>
-                    <li><a href="#" class="footer__link">Contato</a></li>
-                    <li><a href="#" class="footer__link">Sobre Nós</a></li>
+<footer>
+        <hr class="linha-footer">
+        <div class="container footer-container">
+            <div class="footer-coluna">
+                <h3>AcessoSP</h3>
+                <ul>
+                    <li><a href="locais-avaliados.html">Locais avaliados</a></li>
+                    <li><a href="profissionais.html">Profissionais</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="">Sobre Nós</a></li>
                 </ul>
             </div>
-
-            <div class="footer__column">
-                <h3 class="footer__title">Explore</h3>
-                <ul class="footer__list">
-                    <li><a href="#" class="footer__link">Como nos ajudar?</a></li>
-                    <li><a href="#" class="footer__link">Trabalhe Conosco</a></li>
-                    <li><a href="#" class="footer__link">Leis</a></li>
+            
+            <div class="footer-coluna">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="">Como nos ajudar?</a></li>
+                    <li><a href="">Trabalhe Conosco</a></li>
+                    <li><a href="">Leis</a></li>
                 </ul>
             </div>
-
-            <div class="footer__column footer__column--info">
-                <h3 class="footer__title">Logo-empresa</h3>
-                <p class="footer__text">AcessoSP, um lugar para todos serem inclusos!</p>
-                <p class="footer__text">Av Liberdade, 871 - 04355-080</p>
-                <div class="footer__socials">
-                    <a href="#" class="footer__social-link">𝕏</a>
-                    <a href="#" class="footer__social-link">📸</a>
-                    <a href="#" class="footer__social-link">📺</a>
+            
+            <div class="footer-coluna info-empresa">
+                <h3>Logo-empresa</h3>
+                <p>AcessoSP, um lugar para todos<br>serem inclusos!</p>
+                <p>Av Liberdade, 871 - 04355-080</p>
+                
+                <div class="redes-sociais">
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navbarMenu');
+            menu.classList.toggle('navbar__menu--open');
+        }
+    </script>
 
 </body>
 </html>

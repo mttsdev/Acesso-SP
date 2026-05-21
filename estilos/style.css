@@ -5,8 +5,6 @@
     padding: 0;
 }
 
-
-
 :root {
     --cor: #B2A7D9;
     --cor-do-gradiente: #80A2BF;
@@ -18,53 +16,53 @@
     --fonte: "Poppins", sans-serif;
 }
 
-body {
-    font-family: var(--fonte);
+body.page {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ---------- CABEÇALHO ---------- */
 
-.cabecalho_navegacao {
-    background-color: var(--cor-principal);
+.header {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: auto;
+    background-color: #0d7a7b;
+    padding: 1rem 3rem;
+    height: 80px;
 }
 
-nav {
+.header__logo { display: flex; align-items: center; }
+.header__nav { flex: 1; display: flex; justify-content: center; }
+.header__nav-list { display: flex; gap: 2rem; }
+.header__nav-link { color: #ffffff; font-size: 0.95rem; padding: 10px;}
+
+.header__nav-link:hover {
+    background-color: #088C8C;
+    transition-duration: .5s;
+    
+}
+
+.header__login-btn {
     display: flex;
-    gap: 2%;
-    min-width: 300px;
-    height: 80px;
     align-items: center;
+    gap: 0.5rem;
+    background-color: #159a9c;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
 }
 
 .cabecalho_navegacao-logo {
-    margin-top: 10px;
     width: 80px;
-    height: 64px;
-}
-
-.cabecalho_navegacao_links, .cabecalho_link_entrar {
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    color: var(--cor-branca);
-    width: 138px;
-    padding: 5px;
-}
-
-.cabecalho_navegacao_links:hover {
-    transition-duration: .5s;
-    background-color: var(--cor-link);
-}
-
-.cabecalho_link_entrar {
-    padding: 10px;
-    background-color: var(--cor-link);
+    height: 70px;
 }
 
 /* ---------- MAIN ---------- */
@@ -205,34 +203,79 @@ div.avaliacoes_avaliacao > span, h3, p, div.person-info {
     height: 48px;
 }
 
-div.line {
-    background-color: rgba(114, 108, 108, 0.767);
-    height: 1px;
-    width: 90%;
-    margin: 8% 5% 8% 5%;
-}
 
 /* ----------------------- FOOTER --------------------------- */
+
+footer {
+    width: 100%;
+    padding-bottom: 40px;
+    background-color: var(--cor-branca, #ffffff);
+}
+
+.linha-footer {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 40px 20px;
+}
 
 div.container {
     display: flex;
     flex-flow: column;
     margin: 0 20px 0 20px;
     justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-coluna h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.footer-coluna ul {
+    padding: 0;
 }
 
 li {
     list-style: none;
+    margin-bottom: 12px;
 }
 
 li > a {
     text-decoration: none;
-    color: black;
+    color: #333333;
+    font-size: 13px;
 }
 
 li > a:hover {
     text-decoration: underline;
 }
+
+.info-empresa p {
+    font-size: 13px;
+    color: #333333;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.redes-sociais a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.redes-sociais a:hover {
+    opacity: 0.6;
+}
+
 
 @media (min-width: 650px) {
     li.tipo_de_acessibilidade {
@@ -243,6 +286,13 @@ li > a:hover {
     .avaliacoes_avaliacao {
         width: 600px;
         transition-duration: .5s;
+    }
+}
+
+@media (min-width: 750px) {
+    div.container {
+        flex-flow: row;
+        gap: 20px;
     }
 }
 
