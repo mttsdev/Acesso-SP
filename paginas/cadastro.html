@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="../estilos/global.css">
-    <link rel="stylesheet" href="../estilos/login.css">
-    <title>Login - AcessoSP</title>
+    <link rel="stylesheet" href="../estilos/cadastro.css">
+    <title>Crie a sua conta - AcessoSP</title>
 </head>
 <body>
     <header>
@@ -32,9 +32,9 @@
     </header>
 
     <main>
-        <h1>Faça login em sua conta</h1>
+        <h1>Crie a sua conta</h1>
         
-        <div class="login-container">
+        <div class="cadastro-container">
             <button class="btn-social">
                 <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google">
                 <span>Continuar com Google</span>
@@ -47,23 +47,27 @@
             
             <p class="paragrafo-ou">ou</p>
             
-            <form action="cadastro.php" method="post">
-                <input class="input-padrao" placeholder="E-mail" type="email" name="email" id="iemail" required>
+            <form action="processa_cadastro.php" method="post">
+                <input class="input-padrao" placeholder="Digite seu e-mail" type="email" name="email" id="iemail" required>
+                
+                <input class="input-padrao" placeholder="Verifique seu e-mail" type="email" name="confirma_email" id="icorretor-email" required>
                 
                 <div class="input-senha-wrapper">
                     <input class="input-padrao" placeholder="Senha" type="password" name="senha" id="isenha" required>
                     <i class="fa-solid fa-eye icon-eye"></i>
                 </div>
-                
-                <button type="submit" class="btn-entrar">Entrar</button>
-                
-                <a class="esqueci" href="esqueci.html">Esqueceu sua senha?</a>
-            </form>
 
-            <div class="cadastro-footer">
-                <hr>
-                <p>Ainda não tem conta? <a href="cadastro.html">Faça seu cadastro!</a></p>
-            </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="comunicacoes" name="comunicacoes">
+                    <label for="comunicacoes">Gostaria de receber comunicações comerciais da Doctoralia (opcional).</label>
+                </div>
+                
+                <button type="submit" class="btn-cadastrar">Criar perfil gratuito</button>
+                
+                <p class="termos-legais">
+                    Ao se registrar, você está de acordo com nossos <a href="termos.html">termos e condições</a>, e confirma estar ciente de nossa <a href="privacidade.html">política de privacidade</a>.
+                </p>
+            </form>
         </div>
     </main>
 </body>
