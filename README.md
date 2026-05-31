@@ -15,6 +15,8 @@
 
 O **AcessoSP** é uma plataforma digital colaborativa desenvolvida com o propósito de mapear, avaliar e promover a **acessibilidade urbana** na cidade de São Paulo. A iniciativa funciona como um guia comunitário onde cidadãos podem partilhar experiências reais sobre as condições de acesso a estabelecimentos comerciais, espaços públicos e pontos turísticos, ajudando pessoas com deficiência (PCD) ou mobilidade reduzida a navegar pela cidade com maior autonomia, segurança e dignidade.
 
+Verifique o site em: https://mttsdev.github.io/Acesso-SP
+
 Com uma interface moderna, totalmente responsiva (*Mobile-First*) e focada em boas práticas de inclusão, o projeto une a conscientização social à tecnologia para transformar a infraestrutura urbana através da força da comunidade.
 
 ---
