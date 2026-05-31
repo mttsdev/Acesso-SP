@@ -1,3 +1,5 @@
+(Este é um projeto acadêmico)
+
 <p align="center">
   <img src="assets/logo-header.png" alt="AcessoSP Logo" width="160"><br>
   <strong>Construindo uma São Paulo mais inclusiva, transparente e acessível para todos.</strong>
